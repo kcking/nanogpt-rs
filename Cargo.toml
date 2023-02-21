@@ -9,4 +9,5 @@ name = "nanogpt_rs"
 crate-type = ["cdylib"]
 
 [dependencies]
+ahash = "0.8.3"
 pyo3 = { version = "0.17.1", features = ["extension-module"] }
