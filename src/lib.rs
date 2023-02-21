@@ -34,6 +34,7 @@ impl Hasher for CharHasher {
     }
 
     fn write(&mut self, bytes: &[u8]) {
+        //  `char`s are fixed-width 4 bytes in Rust.
         if bytes.len() != 4 {
             return;
         }
