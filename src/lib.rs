@@ -38,7 +38,7 @@ impl Hasher for CharHasher {
             return;
         }
         //  Gracefully fall-back to `0`
-        let i = u32::from_le_bytes(bytes.try_into().unwrap_or([0; 4]));
+        let i = u32::from_ne_bytes(bytes.try_into().unwrap_or([0; 4]));
         //  Gracefully fall-back to 'a'
         self.c = char::from_u32(i).unwrap_or('a');
     }
