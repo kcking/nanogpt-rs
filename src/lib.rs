@@ -16,6 +16,7 @@ fn sum_as_string(a: usize, b: usize) -> PyResult<String> {
 fn nanogpt_rs(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(sum_as_string, m)?)?;
     m.add_function(wrap_pyfunction!(unique_characters, m)?)?;
+    m.add_class::<NanoGpt>()?;
     Ok(())
 }
 
@@ -50,5 +51,16 @@ impl BuildHasher for CharHasher {
 
     fn build_hasher(&self) -> Self::Hasher {
         Self::default()
+    }
+}
+
+#[pyclass(name = "NanoGpt")]
+pub struct NanoGpt {}
+
+#[pymethods]
+impl NanoGpt {
+    #[new]
+    fn __new__() -> Self {
+        Self {}
     }
 }
