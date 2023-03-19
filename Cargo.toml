@@ -11,3 +11,5 @@ crate-type = ["cdylib"]
 [dependencies]
 ahash = "0.8.3"
 pyo3 = { version = "0.17.1", features = ["extension-module"] }
+# use git for pytorch 2.0 support
+tch = { git = "https://github.com/LaurentMazare/tch-rs" }
