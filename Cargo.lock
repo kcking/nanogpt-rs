@@ -696,12 +696,13 @@ checksum = "8ae9980cab1db3fceee2f6c6f643d5d8de2997c58ee8d25fb0cc8a9e9e7348e5"
 [[package]]
 name = "tch"
 version = "0.11.0"
-source = "git+https://github.com/LaurentMazare/tch-rs#c016fcf7d373e18d90bae4417a6a295dcfb4a54a"
+source = "git+https://github.com/kcking/tch-rs?branch=python-interop#e84c865e2601da2f33732b52e533cd14d5088553"
 dependencies = [
  "half",
  "lazy_static",
  "libc",
  "ndarray",
+ "pyo3",
  "rand",
  "thiserror",
  "torch-sys",
@@ -762,7 +763,7 @@ checksum = "1f3ccbac311fea05f86f61904b462b55fb3df8837a366dfc601a0161d0532f20"
 [[package]]
 name = "torch-sys"
 version = "0.11.0"
-source = "git+https://github.com/LaurentMazare/tch-rs#c016fcf7d373e18d90bae4417a6a295dcfb4a54a"
+source = "git+https://github.com/kcking/tch-rs?branch=python-interop#e84c865e2601da2f33732b52e533cd14d5088553"
 dependencies = [
  "anyhow",
  "cc",
